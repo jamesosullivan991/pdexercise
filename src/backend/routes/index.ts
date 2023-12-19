@@ -1,5 +1,5 @@
-import userRoutes from './userRoutes'
+import todoRoutes from './todoRoutes'
 
 export default {
-  userRoutes
+  todoRoutes
 }
