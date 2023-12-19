@@ -17,9 +17,9 @@ interface UserJsonSchema {
   }
 }
 
-export default class User extends Model implements IUser {
+export default class Todo extends Model implements ITodo {
   static get tableName (): string {
-    return 'users'
+    return 'todos'
   }
 
   id!: number
@@ -29,7 +29,7 @@ export default class User extends Model implements IUser {
     return {
       type: 'object',
       properties: {
-        description: { type: 'string', minLength: 1, maxLength: 200 },
+        description: { type: 'string', minLength: 1, maxLength: 400 },
       }
     }
   }

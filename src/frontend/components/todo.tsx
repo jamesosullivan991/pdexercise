@@ -29,12 +29,12 @@ const Todo = () => {
         fetchTodos();
     };
 
-    const toggleComplete = async (id) => {
+    const toggleComplete = async (id: string) => {
         await axiosInstance.patch(`/api/todos/${id}`);
         fetchTodos();
     };
 
-    const deleteTodo = async (id) => {
+    const deleteTodo = async (id: string) => {
         await axiosInstance.delete(`/api/todos/${id}`);
         fetchTodos();
     };

@@ -10,15 +10,15 @@ const config = {
             host: '127.0.0.1',
             user: 'postgres',
             password: 'secret',
-            database: 'postgres',
+            database: 'postgres'
         },
         pool: {
             min: 2,
-            max: 10,
+            max: 10
         },
         migrations: {
-            directory: migrationsDirPath,
-        },
+            directory: migrationsDirPath
+        }
     },
     production: {},
     test: {
@@ -28,16 +28,16 @@ const config = {
             host: '127.0.0.1',
             user: 'postgres',
             password: 'secret',
-            database: 'postgres',
+            database: 'postgres'
         },
         pool: {
             min: 2,
-            max: 10,
+            max: 10
         },
         acquireConnectionTimeout: 10000,
         migrations: {
-            directory: migrationsDirPath,
-        },
-    },
+            directory: migrationsDirPath
+        }
+    }
 };
 exports.default = config;

@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-const MyApp = function createApp({ Component, pageProps }) {
-    return <Component {...pageProps}/>;
+const MyApp = ({ Component, pageProps }) => {
+    return react_1.default.createElement(Component, Object.assign({}, pageProps));
 };
 exports.default = MyApp;

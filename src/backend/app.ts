@@ -10,7 +10,7 @@ app.use(cors({
   origin: 'http://localhost:3000' // change to env
 }))
 
-app.use('/api/todos', routes.userRoutes)
+app.use('/api/todos', routes.todoRoutes)
 
 const port = process.env.PORT || 3001
 
