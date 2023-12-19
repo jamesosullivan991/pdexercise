@@ -3,6 +3,8 @@ import TodoService from '../services/todoService'
 const todoController = {
   async createTodo (req: any, res: any) {
     try {
+        console.log("gooooth herhe")
+        console.log(req.body)
       const newTodo = await TodoService.createTodo(req.body)
       res.status(201).json(newTodo)
     } catch (error: any) {
