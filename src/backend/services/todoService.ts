@@ -2,7 +2,6 @@ import Todo from '../models/todo'
 
 interface TodoData {
   description: string
-  // Add other properties as needed
 }
 
 export async function createTodo(TodoData: TodoData) {

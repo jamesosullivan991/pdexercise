@@ -29,8 +29,8 @@ const Todo = () => {
         fetchTodos();
     };
 
-    const toggleComplete = async (id: string) => {
-        await axiosInstance.patch(`/api/todos/${id}`);
+    const toggleComplete = async (todo: any) => {
+        await axiosInstance.put(`/api/todos/${todo.id}`, { isCompleted: !todo.isCompleted });
         fetchTodos();
     };
 
@@ -55,11 +55,11 @@ const Todo = () => {
             <Button onClick={addTodo}>Add Todo</Button>
             <TodoList>
                 {todos.map((todo: any, idx) => (
-                    <TodoItem key={idx}>
+                    <TodoItem key={todo.id}>
                         <input
                             type="checkbox"
                             checked={todo.completed}
-                            onChange={() => toggleComplete(todo.id)}
+                            onChange={() => toggleComplete(todo)}
                         />
                         {todo.description}
                         <Button onClick={() => deleteTodo(todo.id)}>Delete</Button>

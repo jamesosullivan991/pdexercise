@@ -12,6 +12,7 @@ const todoController = {
 
   async getTodos(req: any, res: any) {
     try {
+      // adjust for tiler
       const todos = await TodoService.getTodos()
       res.status(200).json(todos)
     } catch (error: any) {
