@@ -15,7 +15,6 @@
     "start": "next start src/frontend",
     "start:api": "node dist/backend/app.js",
     "lint": "npx eslint --ext .js --ext .jsx . --cache",
-    "lints": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "lint:fix": "npm run lint -- --fix",
     "test": "run-s test:unit",
     "test:unit": "jest . --runInBand"
