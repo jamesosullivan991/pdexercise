@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import routes from './routes' // Assuming userRoutes is a named export from routes.js
+import routes from './routes'
 
 const app = express()
 
@@ -12,6 +12,6 @@ app.use(cors({
 
 app.use('/api/users', routes.userRoutes)
 
-// ... other middleware and route configurations
+const port = process.env.PORT || 3005
 
-app.listen(3005, () => { console.log('Server running on port 3005') })
+app.listen(port, () => { console.log(`Server running on port ${port}`) })
